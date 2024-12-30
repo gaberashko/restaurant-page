@@ -4,4 +4,62 @@
     box-sizing: border-box;
     line-height: 1.5;
     outline: none;
+    border: none;
+}
+
+:root {
+    --accent-bg:#dcdcdc;
+    --primary-bg:#efbdcf;
+    --primary-bggc: #f0e5e5;
+    --primary-bga:#d797bd;
+    --primary-tcx: #3f3d3e;
+    --primary-tci: #4e4c4d;
+    --primary-tcr: #3f3d3e;
+    --secondary-tcs: #f3f2f2;
+    --secondary-bg:#ebebeb;
+    --secondary-bga:#a02d72;
+    --shadow-color:#9a9898;
+    --logo-shadow: #d360b9;
+    --brdradius: 10px;
+    --stdpad: 8px;
+}
+
+body {
+    background-color: var(--primary-bggc);
+}
+
+header {
+    padding: var(--stdpad) var(--stdpad) 0;
+    background: linear-gradient(var(--primary-bga), var(--primary-bggc));
+    box-shadow: 0px 1px 5px var(--shadow-color);
+    overflow-y:hidden;
+    height:150px;
+}
+
+nav {
+    height:100%;
+}
+
+header > * {
+    display: inline-block;
+    vertical-align:middle;
+}
+
+button {
+    background-color: var(--primary-bggc);
+    border: 1px solid var(--primary-bga);
+    border-top-left-radius: var(--brdradius);
+    border-top-right-radius: var(--brdradius);
+    padding: var(--stdpad);
+    min-width: 100px;
+    vertical-align: middle;
+}
+
+button:focus {
+    background-color: var(--primary-bga);
+}
+
+#logo {
+    height: 150px;
+    filter:drop-shadow(1px 1px 2px var(--logo-shadow));
 }
