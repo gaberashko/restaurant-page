@@ -43,6 +43,7 @@ p {
     --primary-subcrd: #f8dae5;
     --primary-tcx: #4e404e;
     --primary-tci: #4e4c4d;
+    --secondary-bgc: #dcdbf7;
     --secondary-tcs: #f3f2f2;
     --secondary-bg:#ebebeb;
     --secondary-bga:#a02d72;
@@ -62,6 +63,8 @@ body {
 }
 
 header {
+    position:sticky;
+    top:0px;
     display: flex;
     flex-direction: row;
     border-bottom-right-radius:var(--brdradius);
@@ -92,17 +95,20 @@ header > * {
 
 footer {
     padding: 16px;
+    text-align: center;
 }
 
 button {
     cursor: pointer;
     user-select: none;
-    background-color: var(--primary-bggc);
-    border: 1px solid var(--primary-bga);
+    background-color: #fff;
+    border-left: 1px solid var(--logo-shadow);
+    border-right: 1px solid var(--logo-shadow);
+    border-top: 1px solid var(--logo-shadow);
     border-top-left-radius: var(--brdradius);
     border-top-right-radius: var(--brdradius);
     padding: var(--stdpad);
-    min-width: 100px;
+    min-width: 150px;
     margin: 0 4px;
 }
 
@@ -111,7 +117,7 @@ button:active {
 }
 
 button:focus {
-    background: linear-gradient(var(--primary-bga), var(--primary-bggc));
+    background: linear-gradient(#fff 80%, var(--primary-bga));
 }
 
 #logo {
@@ -144,7 +150,7 @@ button:focus {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border:1px solid rgba(255, 255, 255, 0.18);
+    border-bottom:1px solid rgba(247, 109, 205, 0.5);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
@@ -155,7 +161,7 @@ button:focus {
 .content-card {
     margin: 0 auto;
     border: 4px solid var(--primary-bg);
-    background-color: var(--secondary-tcs);
+    background-color: var(--secondary-bgc);
     border-radius: var(--brdradius);
     padding: 24px;
     min-width:700px;
@@ -171,10 +177,11 @@ button:focus {
     border-radius: var(--brdradius);
     padding: 24px;
     max-width: 450px;
+    box-shadow: 1px 1px 10px var(--primary-bga);
 }
 
 .subcard::before {
-    transform:rotate(25deg);
+    transform:rotate(25deg) translate(-20%, -50%);
     z-index: 2;
     content:"";
     position:absolute;
@@ -182,7 +189,7 @@ button:focus {
     background-size:contain;
     height:50px;
     width:50px;
-    top:90%;
+    top:100%;
     right:-5.5%;
 }
 
